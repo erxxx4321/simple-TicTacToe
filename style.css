@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	cursor: pointer;
+	background: none;
+	border: none;
+	color: #fff;
+}
+
+body {
+	background: rgb(68, 106, 85);
+	background: radial-gradient(
+		circle,
+		rgba(68, 106, 85, 1) 0%,
+		rgba(21, 66, 46, 1) 68%
+	);
+	font-family: "Rock Salt", cursive;
+	color: #fff;
+	line-height: 1.6;
+}
+
+.container {
+	max-width: 350px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 50px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	font-size: 70px;
+	margin: 50px 0;
+}
+
+table tr:nth-child(1) td,
+tr:nth-child(2) td {
+	border-bottom: 2px solid #fff;
+}
+
+table tr td {
+	min-width: 120px;
+	height: 150px;
+	padding: 0 20px;
+}
+
+table tr td:nth-child(1) {
+	border-right: 2px solid #fff;
+}
+
+table tr td:nth-child(2) {
+	border-right: 2px solid #fff;
+}
+
+.gameResult {
+	letter-spacing: 2px;
+	line-height: 0.8;
+	font-size: 20px;
+	height: 20px;
+}
+
+.replay {
+	font-family: inherit;
+	font-size: 20px;
+}
+
+.replay span {
+	font-size: 40px;
+}
