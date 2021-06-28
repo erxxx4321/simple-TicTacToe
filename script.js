@@ -55,22 +55,17 @@ const GameBoard = (() => {
 			let secondStatus = winCondition[i][1];
 			let thirdStatus = winCondition[i][2];
 
+			if (!gameBoard.includes("")) {
+				gameResult.textContent = "Tie !";
+			}
+
 			if (
 				count >= 4 &&
 				gameBoard[secondStatus] != "" &&
 				gameBoard[firstStatus] === gameBoard[secondStatus] &&
 				gameBoard[secondStatus] === gameBoard[thirdStatus]
 			) {
-				gameResult.textContent = "Win";
-				i = winCondition.length;
-			}
-
-			if (
-				count >= 7 &&
-				gameBoard[firstStatus] != gameBoard[secondStatus] &&
-				gameBoard[secondStatus] != gameBoard[thirdStatus]
-			) {
-				gameResult.textContent = "Tie";
+				gameResult.textContent = "Win !";
 				i = winCondition.length;
 			}
 		}
