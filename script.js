@@ -14,7 +14,7 @@ const GameBoard = (() => {
 	const gameResult = document.querySelector(".gameResult");
 
 	boxes.forEach((box) => {
-		box.addEventListener("click", () => {
+		function playGame() {
 			if (gameBoard[box.id] != "") {
 				return;
 			}
@@ -26,16 +26,20 @@ const GameBoard = (() => {
 				box.textContent = player2.mark;
 				gameBoard[box.id] = player2.mark;
 			}
+
 			checkGameStatus(count);
 			count += 1;
+		}
 
-			replayBtn.addEventListener("click", () => {
-				box.textContent = "";
-				gameBoard[box.id] = "";
-				gameResult.textContent = "";
-				count = 0;
-			});
-		});
+		function replayGame() {
+			box.textContent = "";
+			gameBoard[box.id] = "";
+			gameResult.textContent = "";
+			count = 0;
+		}
+
+		box.addEventListener("click", playGame);
+		replayBtn.addEventListener("click", replayGame);
 	});
 
 	function checkGameStatus(count) {
